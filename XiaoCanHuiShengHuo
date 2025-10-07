@@ -21,4 +21,4 @@
 http-response ^https:\/\/gw\.xiaocantech\.com\/rpc script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, timeout=30, tag=replaceBody, argument=%22vip_pop_up%22%3A0-%3E%22vip_pop_up%22%3A2
 
 [MITM]
-hostname = gw.xiaocantech.com, web2.realtech-inc.com
+hostname = sdk.1rtb.net, gw.xiaocantech.com
