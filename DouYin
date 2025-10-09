@@ -1,0 +1,9 @@
+#!name=抖音去广告
+#!desc=Mac版去广告
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/TikTok.png
+
+[Rewrite]
+^https:\/\/www\.douyin\.com\/aweme\/v1\/web\/tab\/feed\/\? response-body-json-jq 'if has("aweme_list") then .aweme_list |= map(select(.is_ads != true)) else . end'
+
+[MITM]
+hostname = www.douyin.com
