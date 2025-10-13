@@ -30,4 +30,4 @@ dns-server =
 
 [script]
 # 定时任务：每天 08:00 和 20:00 检查更新，超时 60 秒，标签 "更新通知"
-cron "0 8,20 * * *" script-path = appstore.js, timeout=60, tag = 更新通知, argument=[{app_ids}]
+cron "55 20 * * *" script-path = appstore.js, timeout=60, tag = 更新通知, argument=[{app_ids}]
