@@ -11,7 +11,7 @@
 app_ids = input,"",tag=AppUrl
 
 # 自定义定时参数
-Cron_Schedule = input,"*/1 * * * *",tag=定时参数
+cron_schedule = input,"*/1 * * * *",tag=定时参数
 
 [script]
-cron "{Cron_Schedule}" script-path = https://raw.githubusercontent.com/fanbie61100/loon-js/refs/heads/main/AppUpdate, timeout=60, tag = AppStore更新通知, argument=[{app_ids}]
+cron "{cron_schedule}" script-path = https://raw.githubusercontent.com/fanbie61100/loon-js/refs/heads/main/AppUpdate, timeout=60, tag = AppStore更新通知, argument=[{app_ids}]
