@@ -7,7 +7,11 @@
 #!tag = 更新通知,AppStore
 
 [Argument]
-app_ids = input,"",tag=AppUrl, desc=支持连续/逗号/空格/换行分隔多个AppUrl
+# 传入 AppUrl
+app_ids = input,"",tag=AppUrl
+
+# 自定义定时参数
+Cron_Schedule = input,"*/1 * * * *",tag=定时参数
 
 [script]
-cron "0 */2 * * *" script-path = https://raw.githubusercontent.com/fanbie61100/loon-js/refs/heads/main/AppUpdate, timeout=60, tag = AppStore更新通知, argument=[{app_ids}]
+cron "{Cron_Schedule}" script-path = https://raw.githubusercontent.com/fanbie61100/loon-js/refs/heads/main/AppUpdate, timeout=60, tag = AppStore更新通知, argument=[{app_ids}]
