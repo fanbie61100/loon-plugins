@@ -8,9 +8,9 @@
 
 [Argument]
 # 传入 AppUrl
-app_ids = input,"",tag=AppUrl,desc=支持空格/逗号/换行填入多个AppUrl
+app_ids = input,"",tag=AppUrl
 # 自定义 Cron 表达式
-cron_time = input,"0 8,20 * * *",tag=定时时间,desc=请使用标准的 Cron 表达式（如 0 8,20 * * * 表示每日早8晚8）
+cron_time = input,"0 0 8,20 ∗ ∗ ∗",tag=定时参数
 
 [script]
 cron {cron_time} script-path = https://raw.githubusercontent.com/fanbie61100/loon-js/refs/heads/main/AppUpdate.js, timeout=60, tag = AppStore更新通知, argument=[{app_ids}]
