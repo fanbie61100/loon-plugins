@@ -1,5 +1,5 @@
 #!name=AppStore更新通知
-#!desc=批量检测AppStore应用更新\n支持连续/逗号/空格/换行填入多个AppUrl
+#!desc=批量检测AppStore应用更新\n支持连续/逗号/空格/换行填入多个AppUrl\n每日早8晚8检测一次
 #!author=FanBieeeee
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/AppStore.png
 #!system = iOS,iPadOS,tvOS,macOS
@@ -10,8 +10,5 @@
 # 传入 AppUrl
 app_ids = input,"",tag=AppUrl
 
-# 新增：定时参数，用于控制脚本执行频率
-cron_exp = input,"*/30 * * * *",tag=定时参数
-
 [script]
-cron "{cron_exp}" script-path = https://raw.githubusercontent.com/fanbie61100/loon-js/refs/heads/main/AppUpdate.js, timeout=60, tag = AppStore更新通知, argument=[{app_ids}]
+cron "0 8,20 * * *" script-path = https://raw.githubusercontent.com/fanbie61100/loon-js/refs/heads/main/AppUpdate.js, timeout=60, tag = AppStore更新通知, argument=[{app_ids}]
