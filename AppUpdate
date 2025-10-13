@@ -1,5 +1,5 @@
 #!name=AppStore更新通知
-#!desc=批量检测AppStore应用更新\n支持空格/逗号/换行填入多个AppUrl\n每日早8晚8检测一次（可自定义时间）
+#!desc=批量检测AppStore应用更新\n支持空格/逗号/换行填入多个AppUrl\n每小时检测一次（可在设置中自定义时间）
 #!date=2025-10-14 03:17:15
 #!author=FanBieeeee
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/AppStore.png
