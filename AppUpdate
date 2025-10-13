@@ -1,0 +1,33 @@
+#!name=App Store 更新通知（批量）
+#!desc=批量检测 App Store 应用更新（支持逗号/空格/换行分隔多个 App ID）。在 Argument 的 app_ids 中填写多个 id，例如：123,456,789
+#!author=你的名字
+#!homepage=https://your.homepage.example
+#!icon=https://example.com/icon.png
+#!input = appName
+#!input = author
+#!select = appType,tool,social,health,sport
+#!select = price,0.99,1.99,4.99
+#!system = iOS,iPadOS,tvOS,macOS
+#!system_version = 15
+#!loon_version = 3.2.1(372)
+#!tag = 更新通知,AppStore
+
+[Argument]
+# 在这里提供一个 free-text 输入，用户在插件 UI 填入多个 id（逗号 / 空格 / 换行任意分隔）
+app_ids = input,"",tag=App IDs,desc=填写多个 App ID（使用逗号、空格或换行分隔），例如：1051902027,123456789
+
+[General]
+bypass-tun =
+skip-proxy =
+real-ip =
+dns-server =
+
+[rule]
+
+[rewrite]
+
+[host]
+
+[script]
+# 定时任务：每天 08:00 和 20:00 检查更新，超时 60 秒，标签 "更新通知"
+cron "0 8,20 * * *" script-path = appstore.js, timeout=60, tag = 更新通知, argument=[{app_ids}]
