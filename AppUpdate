@@ -1,7 +1,7 @@
 #!name=AppStore更新通知
-#!desc=批量检测AppStore应用更新\n支持空格/逗号/换行填入多个AppURL\n每半小时检测一次（可在设置中自定义时间）
-#!date=2025-10-14 09:29
-#!author=FanBieeeee
+#!desc=批量检测AppStore应用更新\n支持空格/逗号/换行填入多个AppURL
+#!date=2025-10-17 06:14
+#author=FanBieeeee
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/AppStore.png
 #!system = iOS,iPadOS,tvOS,macOS
 #!tag = 更新通知,AppStore
