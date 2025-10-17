@@ -3,7 +3,7 @@
 #!openUrl = 
 #!tag = 定时任务
 #!loon_version = 3.3.4(898)
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Notifyman.png
+#!icon = https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
 #!date = 2025-09-18 12:00
 
 [Argument]
