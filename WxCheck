@@ -1,0 +1,20 @@
+#!name = 微信支付有优惠
+#!desc = 自动领取微信支付优惠金币任务
+#!openUrl = 
+#!tag = 定时任务
+#!loon_version = 3.3.4(898)
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Notifyman.png
+#!date = 2025-09-18 12:00
+
+[Argument]
+Cookie-wechatpay = switch, true, false, tag = [微信支付有优惠]领金币Token, desc = 获取[微信支付有优惠]领金币Token
+Task-wechatpay = switch, true, false, tag = [微信支付有优惠]领金币Task, desc = 定时运行[微信支付有优惠]领金币Task
+Cron-wechatpay = input, "0 0 9 * * *", tag = [微信支付有优惠]定时参数Cron, desc = 输入Cron表达式来定时运行[微信支付有优惠]领金币Task
+
+[Script]
+# 微信支付有优惠 - payapp.weixin.qq.com
+http-response https:\/\/payapp\.weixin\.qq\.com\/(coupon-center-user\/home\/login|coupon-center-award\/award\/detail) script-path = https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, requires-body = true, tag = [微信支付有优惠]领金币Token, enable={Cookie-wechatpay}
+cron {Cron-wechatpay} script-path = https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, tag = [微信支付有优惠]领金币Task, enable={Task-wechatpay}
+
+[MitM]
+hostname = payapp.weixin.qq.com
