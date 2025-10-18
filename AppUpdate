@@ -1,9 +1,9 @@
-#!name=AppStore更新通知
-#!desc=批量检测AppStore应用更新\n支持空格/逗号/换行填入多个AppURL
-#!date=2025-10-17 06:14
-#author=FanBieeeee
-#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/AppStore.png
-#!system = iOS,iPadOS,tvOS,macOS
+#!name= AppStore更新通知
+#!desc= 批量检测AppStore应用更新\n支持空格/逗号/换行填入多个AppURL
+#!date= 2025-10-17 06:14
+#author= FanBieeeee
+#!icon= https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/AppStore.png
+#!system = iOS,iPadOS,macOS
 #!tag = 更新通知,AppStore
 
 [Argument]
