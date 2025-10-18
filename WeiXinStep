@@ -1,0 +1,14 @@
+#!name= 微信步数刷步
+#!desc= 批量刷微信步数
+#!date= 2025-10-18 21:00
+#author= FanBieeeee
+#!icon= https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/Weixin.png
+#!system = iOS,iPadOS,macOS
+#!tag = 微信,步数
+
+[Argument]
+# 自定义 Cron 表达式
+cron_time = input,"0 0 8,12,16 * * *",tag=定时参数
+
+[script]
+cron {cron_time} script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/mi/step.js, timeout=60, tag = 微信步数
