@@ -1,0 +1,11 @@
+#!name=FuckADs
+#!desc=广告拦截与公告屏蔽
+#!date=2025-10-26 08:16:02
+#!author=FanBieeeee
+#!icon=https://raw.githubusercontent.com/luestr/IconResource/main/Other_icon/120px/RemoveAds.png
+#!system = iOS,iPadOS
+#!tag = 去广告,通用匹配版
+
+[Rewrite]
+# > 通用匹配版
+^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/.*?\/v\d\/(version|notice\?|top_notice\?|advert\?position=[^2]+) - reject-200
