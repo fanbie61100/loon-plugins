@@ -8,7 +8,7 @@
 
 [Argument]
 # 自定义 Cron 表达式
-cron_time = input,"0 0 8 * * *",tag=定时参数
+cron_time = input,"0 0 0 * * *",tag=定时参数
 
 [script]
 cron {cron_time} script-path=https://gist.githubusercontent.com/Sliverkiss/991a81be1fc8cf2a1937432be68f5521/raw/xxyx.js, timeout=60, tag = 晓晓优选
