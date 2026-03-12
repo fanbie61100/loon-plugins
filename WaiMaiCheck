@@ -1,0 +1,14 @@
+#!name=歪麦霸王餐自动化
+#!desc=日常任务、抽奖
+#!date=2025-3-12 20:13:30
+#!author=FanBieeeee
+#!icon=https://pp.myapp.com/ma_icon/0/icon_54200500_1772765727/256
+#!system = iOS,iPadOS
+#!tag = 自动化,歪麦霸王餐
+
+[Argument]
+# 自定义 Cron 表达式
+cron_time = input,"0 0 0 * * *",tag=定时参数
+
+[script]
+cron {cron_time} script-path=https://gist.githubusercontent.com/Sliverkiss/49a9ffb2169a2becc33bf4fdbf6eb99a/raw/wmbwc.js, timeout=60, tag = 歪麦霸王餐
