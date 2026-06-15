@@ -1,6 +1,6 @@
 #!name=小蚕霸王餐自动化
 #!desc=日常任务、抽奖
-#!date=2025-10-14 20:13:30
+#!date=2026-6-15 20:13:30
 #!author=FanBieeeee
 #!icon=https://raw.githubusercontent.com/luestr/IconResource/main/App_icon/120px/XiaoCan.png
 #!system = iOS,iPadOS
@@ -11,4 +11,4 @@
 cron_time = input,"0 0 0 * * *",tag=定时参数
 
 [script]
-cron {cron_time} script-path=https://gist.githubusercontent.com/Sliverkiss/250a02315f0a2c99f42da3b3573375c8/raw/xcbwc.js, timeout=60, tag = 小蚕霸王餐
+cron {cron_time} script-path=https://gist.githubusercontent.com/Sliverkiss/27c601d97a3f8960b212e5cac5b6c470/raw/xcbwc.js, timeout=60, tag = 小蚕霸王餐
